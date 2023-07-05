@@ -1,6 +1,8 @@
 import { MdOutlineDarkMode } from 'react-icons/md'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import { navLinks } from '../../data/constants'
 
 const NavBar = () => {
   const [ menu, setMenu ] = useState(false)  
@@ -11,8 +13,7 @@ const NavBar = () => {
         <h1 className="text-2xl text-blue-600 py-4 font-semibold">Tk Blog</h1>
         <div className="flex items-center">
             <ul className="hidden sm:flex items-center text-gray-500"> 
-                <li className="mx-2 p-2">Home</li>
-                <li className="mx-2 p-2">New Blog</li>
+                { navLinks.map(value => <NavLink key={value} className="mx-2 p-2">{value}</NavLink>) }
             </ul>
             <MdOutlineDarkMode size={25} className='mx-2 cursor-pointer' />
             <AiOutlineMenu 
@@ -23,10 +24,9 @@ const NavBar = () => {
         </div>
         {/* mobile menu */}
         { menu && (
-            <div className='absolute top-0 left-0 w-full h-screen flex justify-center items-center backdrop-blur-md'>
+            <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center backdrop-blur-md'>
                 <ul className='flex flex-col justify-center items-center text-gray-500'> 
-                    <li className="p-2 text-lg">Home</li>
-                    <li className="p-2 text-lg">New Blog</li>
+                    { navLinks.map(value => <NavLink key={value} className="p-2 text-lg">{value}</NavLink>) }
                 </ul>
                 <AiOutlineClose 
                     size={25} 
