@@ -14,6 +14,17 @@ const NavBar = () => {
             <MdOutlineDarkMode size={25} className='mx-2 cursor-pointer' />
             <AiOutlineMenu size={25} className='sm:hidden mx-2 cursor-pointer' />
         </div>
+        {/* mobile view */}
+        <div className='absolute top-0 left-0 w-full h-screen flex justify-center items-center backdrop-blur-md'>
+            <ul className='flex flex-col justify-center items-center text-gray-500'> 
+                <li className="p-2 text-lg">Home</li>
+                <li className="p-2 text-lg">New Blog</li>
+            </ul>
+            <AiOutlineClose 
+                size={25} 
+                className='absolute top-4 right-4 cursor-pointer'
+            />
+        </div>
       </div>
     </nav>
   )
