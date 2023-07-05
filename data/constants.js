@@ -1,1 +1,10 @@
-export const navLinks = [ 'Home', 'New Blog']
+export const navLinks = [
+    {
+        value: 'Home',
+        to: '/'
+    },
+    {
+        value: 'New Blog',
+        to: '/create'
+    }
+]
