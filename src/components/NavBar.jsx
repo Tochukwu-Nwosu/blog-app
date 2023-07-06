@@ -7,6 +7,7 @@ import { navLinks } from '../../data/constants'
 const NavBar = () => {
   const [ menu, setMenu ] = useState(false)  
     
+  // modify font, style and color   
   return (
     <nav className="max-w-[1024px] px-4 mx-auto border-b-2">
       <div className="w-full flex justify-between">
