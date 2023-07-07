@@ -9,7 +9,6 @@ const NavBar = () => {
   const [ darkMode, setdarkMode ] = useState(false)
     
   // modify font, style and color   
-  // add functionality for darkmode button & import lightmode icon
   return (
     <nav className="max-w-[1024px] px-4 mx-auto border-b-2">
       <div className="w-full flex justify-between">
@@ -20,6 +19,7 @@ const NavBar = () => {
                     link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400">{link.value}</NavLink>
                 ) }
             </ul>
+            {/* work on the functionality of the light & darkmode buttons */}
             { !darkMode ? (
                     <MdOutlineDarkMode 
                         size={25} 
@@ -44,7 +44,9 @@ const NavBar = () => {
         { menu && (
             <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center backdrop-blur-md'>
                 <ul className='flex flex-col justify-center items-center text-gray-600'> 
-                    { navLinks.map(link => <NavLink key={link.value} to={link.to} className="p-2 text-lg hover:text-gray-400 hover:scale-110 ease-in-out duration-100">{link.value}</NavLink>) }
+                    { navLinks.map(
+                        link => <NavLink key={link.value} to={link.to} className="p-2 text-lg hover:text-gray-400 hover:scale-110 ease-in-out duration-100">{link.value}</NavLink>
+                    ) }
                 </ul>
                 <AiOutlineClose 
                     size={25} 
