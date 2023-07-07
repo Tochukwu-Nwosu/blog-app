@@ -1,11 +1,17 @@
+import Home from "./components/Home"
 import NavBar from "./components/NavBar"
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
     <Router>
       <div>
         <NavBar />
+        <main className="max-w-[1024px] px-4 py-8 mx-auto">
+          <Routes>
+            <Route index element={<Home />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   )
