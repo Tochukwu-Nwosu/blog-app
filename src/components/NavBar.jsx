@@ -16,13 +16,24 @@ const NavBar = () => {
         <h1 className="text-2xl text-blue-600 py-4 font-semibold">Tk Blog</h1>
         <div className="flex items-center">
             <ul className="hidden sm:flex items-center text-gray-600"> 
-                { navLinks.map(link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400">{link.value}</NavLink>) }
+                { navLinks.map(
+                    link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400">{link.value}</NavLink>
+                ) }
             </ul>
             { !darkMode ? (
-                <MdOutlineDarkMode size={25} className='mx-2 cursor-pointer' onClick={() => setdarkMode(true)} />
-            ) : (
-                <MdDarkMode size={25} className='mx-2 cursor-pointer' onClick={() => setdarkMode(false)} />
-            ) }
+                    <MdOutlineDarkMode 
+                        size={25} 
+                        className='mx-2 cursor-pointer' 
+                        onClick={() => setdarkMode(true)} 
+                    />
+                ) : (
+                    <MdDarkMode 
+                        size={25} 
+                        className='mx-2 cursor-pointer' 
+                        onClick={() => setdarkMode(false)} 
+                    />
+                ) 
+            }
             <AiOutlineMenu 
                 size={25} 
                 className='sm:hidden mx-2 cursor-pointer' 
