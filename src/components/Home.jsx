@@ -4,24 +4,28 @@ import axios from 'axios'
 const Home = () => {
   const [ blogs, setBlogs ] = useState([])
   const [ error, setError ] = useState('')
+  const [ loading, setLoading ] = useState(true)
 
   useEffect(() => {
     axios.get('http://localhost:8000/blogs')
         .then( response => {
             setBlogs(response.data) 
             setError('')
+            setLoading(false)
         })
         .catch( err => {
             err.message === "Network Error" ? 
                 setError("Network Error!") : 
                 setError('Data Not Found!')
             setBlogs([])
+            setLoading(false)
         })
   }, [])
   
   return (
     <div className="my-6">
       <h1 className="text-xl sm:text-4xl xl:text-5xl my-2 font-semibold text-blue-600">My Blogs</h1>
+      { loading && <div className="py-2 xl:py-3">Loading...</div> }
       { error && <div className="py-2 xl:py-3">{error}</div> }
       { blogs && (
         blogs.map(({ id, title, author }) => (
