@@ -1,26 +1,7 @@
-import { useEffect, useState } from "react"
-import axios from 'axios'
+import useFetch from "./useFetch"
 
 const Home = () => {
-  const [ blogs, setBlogs ] = useState([])
-  const [ error, setError ] = useState('')
-  const [ loading, setLoading ] = useState(true)
-
-  useEffect(() => {
-    axios.get('http://localhost:8000/blogs')
-        .then( response => {
-            setBlogs(response.data) 
-            setError('')
-            setLoading(false)
-        })
-        .catch( err => {
-            err.message === "Network Error" ? 
-                setError("Network Error!") : 
-                setError('Data Not Found!')
-            setBlogs([])
-            setLoading(false)
-        })
-  }, [])
+  const { data: blogs, error, loading } = useFetch('http://localhost:8000/blogs')
   
   return (
     <div className="my-6">
