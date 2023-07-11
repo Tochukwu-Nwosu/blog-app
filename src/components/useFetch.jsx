@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const useFetch = (url) => {
-  const [ data, setData ] = useState([])
+  const [ data, setData ] = useState('')
   const [ error, setError ] = useState('')
   const [ loading, setLoading ] = useState(true)
 
@@ -17,7 +17,7 @@ const useFetch = (url) => {
             err.message === "Network Error" ? 
                 setError("Network Error!") : 
                 setError('Data Not Found!')
-            setData([])
+            setData('')
             setLoading(false)
         })
   }, [url])
