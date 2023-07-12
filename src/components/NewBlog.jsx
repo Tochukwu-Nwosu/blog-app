@@ -1,10 +1,11 @@
 import { useState } from "react"
+import moment from "moment"
 
 const NewBlog = () => {
   const [ data, setData ] = useState({
     title: '',
     image: '',
-    date: '',
+    date: moment().format('LL'),
     authorName: '',
     authorImage: '',
     body: ''
@@ -22,7 +23,7 @@ const NewBlog = () => {
   }
 
   const { title, image, authorName, authorImage, body } = data
-
+  
   return (
     <div>
       <h1 className="text-3xl sm:text-4xl 2xl:text-5xl my-4 font-semibold text-blue-600">Add Blog</h1>
