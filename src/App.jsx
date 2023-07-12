@@ -1,3 +1,4 @@
+import NewBlog from "./components/NewBlog"
 import Blogs from "./components/Blogs"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
@@ -12,6 +13,7 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route path='/blogs/:id' element={<Blogs />} />
+            <Route path='/create' element={<NewBlog />} />
           </Routes>
         </main>
       </div>

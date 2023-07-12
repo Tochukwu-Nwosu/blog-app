@@ -6,7 +6,6 @@ const Blogs = () => {
     const { data: blog, error, loading } = useFetch(`http://localhost:8000/blogs/${param.id}`)
     const { title, date, author, image, body } = blog
 
-    // Add style for mobile view
     return (
         <article className="sm:my-6 px-2 sm:px-4 2xl:px-5 py-2 2xl:py-3">
             { loading && <div className="py-2 xl:py-3">Loading...</div> }
