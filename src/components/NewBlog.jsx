@@ -1,15 +1,16 @@
 import { useState } from "react"
 import moment from "moment"
+import axios from "axios"
 
 const NewBlog = () => {
   const [ data, setData ] = useState({
     title: '',
-    image: '',
     date: moment().format('LL'),
     author: {
         imgSrc: '',
         name: ''
     },
+    image: '',
     body: ''
   })
 
@@ -26,10 +27,13 @@ const NewBlog = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log(data)
+    axios.post('http://localhost:8000/blogs', data)
+      .then( response => console.log(response) )
+      .catch( err => console.log(err) )
+
   }
 
-  const { title, image, author: { imgSrc, name }, body } = data
+  const { title, author: { imgSrc, name }, image, body } = data
   
   return (
     <div>
