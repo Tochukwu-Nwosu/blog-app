@@ -32,6 +32,17 @@
       },
       "body": "Blockchain is a distributed ledger system.",
       "id": 3
+    },
+    {
+      "title": "Cybersecurity",
+      "date": "July 14, 2023",
+      "author": {
+        "imgSrc": "http://google.com",
+        "name": "Edward Blanche"
+      },
+      "image": "http://google.com",
+      "body": "Cybersecurity...",
+      "id": 4
     }
   ]
 }

@@ -1,8 +1,10 @@
 import { useState } from "react"
 import moment from "moment"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 const NewBlog = () => {
+  const navigate = useNavigate()
   const [ data, setData ] = useState({
     title: '',
     date: moment().format('LL'),
@@ -28,7 +30,7 @@ const NewBlog = () => {
     e.preventDefault()
 
     axios.post('http://localhost:8000/blogs', data)
-      .then( response => console.log(response) )
+      .then( response => navigate('/') )
       .catch( err => console.log(err) )
 
   }
