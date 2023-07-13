@@ -7,7 +7,7 @@ const NewBlog = () => {
   const navigate = useNavigate()
   const [ data, setData ] = useState({
     title: '',
-    date: moment().format('LL'),
+    date: moment().format('LL'),  // displays current date
     author: {
         imgSrc: '',
         name: ''
@@ -30,7 +30,7 @@ const NewBlog = () => {
     e.preventDefault()
 
     axios.post('http://localhost:8000/blogs', data)
-      .then( () => navigate('/') )
+      .then( () => navigate('/') )    // redirects after POST
       .catch( err => console.log(err) )
 
   }
