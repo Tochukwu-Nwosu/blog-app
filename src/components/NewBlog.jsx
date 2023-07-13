@@ -6,14 +6,21 @@ const NewBlog = () => {
     title: '',
     image: '',
     date: moment().format('LL'),
-    authorName: '',
-    authorImage: '',
+    author: {
+        imgSrc: '',
+        name: ''
+    },
     body: ''
   })
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setData({ ...data, [name]: value })
+    
+    name === 'imgSrc' || name === 'name' ? (
+        setData({ ...data, author: { ...data.author, [name]: value } })
+    ) : (
+        setData({ ...data, [name]: value })
+    )
   }
 
   const handleSubmit = (e) => {
@@ -22,7 +29,7 @@ const NewBlog = () => {
     console.log(data)
   }
 
-  const { title, image, authorName, authorImage, body } = data
+  const { title, image, author: { imgSrc, name }, body } = data
   
   return (
     <div>
@@ -37,12 +44,12 @@ const NewBlog = () => {
             <input type="url" name="image" id="image" value={image} required onChange={handleChange} />
         </div>
         <div>
-            <label htmlFor="authorName">Enter author name:</label>
-            <input type="text" name="authorName" id="authorName" value={authorName} required onChange={handleChange} />
+            <label htmlFor="name">Enter author fullname:</label>
+            <input type="text" name="name" id="name" value={name} required onChange={handleChange} />
         </div>
         <div>
-            <label htmlFor="authorImage">Enter author image url:</label>
-            <input type="url" name="authorImage" id="authorImage" value={authorImage} required onChange={handleChange} />
+            <label htmlFor="imgSrc">Enter author image url:</label>
+            <input type="url" name="imgSrc" id="imgSrc" value={imgSrc} required onChange={handleChange} />
         </div>
         <div>
             <label htmlFor="body">Blog body:</label>
