@@ -30,7 +30,7 @@ const NewBlog = () => {
     e.preventDefault()
 
     axios.post('http://localhost:8000/blogs', data)
-      .then( response => navigate('/') )
+      .then( () => navigate('/') )
       .catch( err => console.log(err) )
 
   }
