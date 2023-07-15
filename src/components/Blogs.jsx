@@ -1,10 +1,19 @@
 import { useParams } from "react-router-dom"
 import useFetch from "./useFetch"
+import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 const Blogs = () => {
     const param = useParams()
+    const navigate = useNavigate()
     const { data: blog, error, loading } = useFetch(`http://localhost:8000/blogs/${param.id}`)
     const { title, date, author, image, body } = blog
+
+    const handleDelete = () => {
+        axios.delete(`http://localhost:8000/blogs/${param.id}`)
+            .then( () => navigate('/') )
+            .catch( err => console.log(err) )
+    }
 
     return (
         <article className="sm:my-6 px-2 sm:px-4 2xl:px-5 py-2 2xl:py-3">
@@ -24,7 +33,7 @@ const Blogs = () => {
                     { param.id === '1' || param.id === '2' ? (
                         <button className="mt-4 px-3 py-2 bg-blue-600 text-gray-100 font-semibold rounded-md opacity-50 cursor-not-allowed">Delete</button>
                       ) : (
-                        <button className="mt-4 px-3 py-2 bg-blue-600 text-gray-100 font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">Delete</button>
+                        <button className="mt-4 px-3 py-2 bg-blue-600 text-gray-100 font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700" onClick={handleDelete}>Delete</button>
                       )
                     }
                 </>
