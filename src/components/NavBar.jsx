@@ -42,7 +42,7 @@ const NavBar = () => {
         </div>
         {/* mobile menu */}
         { menu && (
-            <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center backdrop-blur-md'>
+            <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center backdrop-blur-md z-10'>
                 <ul className='flex flex-col justify-center items-center text-gray-600'> 
                     { navLinks.map(
                         link => <NavLink key={link.value} to={link.to} className="p-2 text-lg hover:text-gray-400 hover:scale-110 ease-in-out duration-100" onClick={() => setMenu(false)}>{link.value}</NavLink>
