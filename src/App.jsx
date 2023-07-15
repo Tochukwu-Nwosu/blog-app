@@ -16,6 +16,7 @@ const App = () => {
             <Route path='/create' element={<NewBlog />} />
           </Routes>
         </main>
+        {/* footer */}
       </div>
     </Router>
   )

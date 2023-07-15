@@ -21,6 +21,7 @@ const Blogs = () => {
                         <img src={image} alt="image" className="w-full h-[400px] object-cover mb-6 sm:mb-8" />
                         <p className="text-justify">{body}</p>
                     </div>
+                    <button className="mt-3 px-3 py-2 bg-blue-600 text-gray-100 font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">Delete</button>
                 </>
             ) }
         </article>
