@@ -42,10 +42,10 @@ const NavBar = () => {
         </div>
         {/* mobile menu */}
         { menu && (
-            <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center backdrop-blur-md z-10'>
+            <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center bg-white/50 backdrop-blur-md z-10'>
                 <ul className='flex flex-col justify-center items-center text-gray-600'> 
                     { navLinks.map(
-                        link => <NavLink key={link.value} to={link.to} className="p-2 text-lg hover:text-gray-400 hover:scale-110 ease-in-out duration-100" onClick={() => setMenu(false)}>{link.value}</NavLink>
+                        link => <NavLink key={link.value} to={link.to} className="p-2 text-lg text-gray-800 font-semibold hover:text-gray-500 hover:scale-110 ease-in-out duration-100" onClick={() => setMenu(false)}>{link.value}</NavLink>
                     ) }
                 </ul>
                 <AiOutlineClose 
