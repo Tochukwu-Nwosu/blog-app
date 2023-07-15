@@ -43,19 +43,19 @@ const NewBlog = () => {
       <h1 className="text-3xl sm:text-4xl 2xl:text-5xl my-4 font-semibold text-blue-600">Add Blog</h1>
       <form onSubmit={handleSubmit} className="px-2 sm:px-4 2xl:px-5 my-8 text-gray-800">
         <div className="my-4 flex flex-col gap-3 sm:text-lg 2xl:text-xl">
-            <label htmlFor="title">Enter title:</label>
+            <label htmlFor="title">Title:</label>
             <input type="text" name="title" id="title" value={title} required onChange={handleChange} className="px-3 py-2 border bg-white border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:border-blue-400 focus:ring-blue-400" />
         </div>
         <div className="my-4 flex flex-col gap-3 sm:text-lg 2xl:text-xl">
-            <label htmlFor="image">Enter image url:</label>
+            <label htmlFor="image">Blog image url:</label>
             <input type="url" name="image" id="image" value={image} required onChange={handleChange} className="px-3 py-2 border bg-white border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:border-blue-400 focus:ring-blue-400" />
         </div>
         <div className="my-4 flex flex-col gap-3 sm:text-lg 2xl:text-xl">
-            <label htmlFor="name">Enter author fullname:</label>
+            <label htmlFor="name">Author fullname:</label>
             <input type="text" name="name" id="name" value={name} required onChange={handleChange} className="px-3 py-2 border bg-white border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:border-blue-400 focus:ring-blue-400" />
         </div>
         <div className="my-4 flex flex-col gap-3 sm:text-lg 2xl:text-xl">
-            <label htmlFor="imgSrc">Enter author image url:</label>
+            <label htmlFor="imgSrc">Author image url:</label>
             <input type="url" name="imgSrc" id="imgSrc" value={imgSrc} required onChange={handleChange} className="px-3 py-2 border bg-white border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:border-blue-400 focus:ring-blue-400" />
         </div>
         <div className="my-4 flex flex-col gap-3 sm:text-lg 2xl:text-xl">
