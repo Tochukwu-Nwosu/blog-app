@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import useFetch from "./useFetch"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
 
 const Blogs = () => {
     const param = useParams()
@@ -28,7 +27,7 @@ const Blogs = () => {
                     </div>
                     <div className="w-full my-3 sm:my-6">
                         <img src={image} alt="image" className="w-full h-[400px] object-cover mb-6 sm:mb-8" />
-                        <p className="text-justify">{body}</p>
+                        <p>{body}</p>
                     </div>
                     { param.id === '1' || param.id === '2' ? (
                         <button className="mt-4 px-3 py-2 bg-blue-600 text-gray-100 font-semibold rounded-md opacity-50 cursor-not-allowed">Delete</button>
