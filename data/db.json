@@ -43,6 +43,17 @@
       "image": "http://google.com",
       "body": "Cybersecurity...",
       "id": 4
+    },
+    {
+      "title": "Data Science",
+      "date": "July 15, 2023",
+      "author": {
+        "imgSrc": "http://google.com",
+        "name": "Jacob Collern"
+      },
+      "image": "http://google.com",
+      "body": "Data Science is ...",
+      "id": 5
     }
   ]
 }
