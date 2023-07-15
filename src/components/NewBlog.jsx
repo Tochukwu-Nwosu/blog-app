@@ -61,9 +61,9 @@ const NewBlog = () => {
         </div>
         <div className="my-4 flex flex-col gap-3 sm:text-lg 2xl:text-xl">
             <label htmlFor="body">Blog body:</label>
-            <textarea name="body" id="body" value={body} required onChange={handleChange} className="px-3 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:border-blue-400 focus:ring-blue-400"></textarea>
+            <textarea name="body" id="body" value={body} required onChange={handleChange} className="resize-none px-3 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:border-blue-400 focus:ring-blue-400"></textarea>
         </div>
-        <button>Add blog</button>
+        <button className="mt-4 px-3 py-2 bg-blue-600 text-gray-100 font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">Add blog</button>
       </form>
     </div>
   )
