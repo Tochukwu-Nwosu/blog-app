@@ -16,7 +16,7 @@ const useFetch = (url) => {
         .catch( err => {
             err.message === "Network Error" ? 
                 setError("Network Error!") : 
-                setError('Data Not Found!')
+                setError('Oops, Data Not Found!')
             setData('')
             setLoading(false)
         })
