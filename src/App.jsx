@@ -1,3 +1,4 @@
+import NotFound from "./components/NotFound"
 import NewBlog from "./components/NewBlog"
 import Blogs from "./components/Blogs"
 import Home from "./components/Home"
@@ -14,7 +15,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path='/blogs/:id' element={<Blogs />} />
             <Route path='/create' element={<NewBlog />} />
-            {/* include 404 page */}
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </main>
         {/* footer */}
