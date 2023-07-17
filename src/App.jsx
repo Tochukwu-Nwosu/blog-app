@@ -14,6 +14,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path='/blogs/:id' element={<Blogs />} />
             <Route path='/create' element={<NewBlog />} />
+            {/* include 404 page */}
           </Routes>
         </main>
         {/* footer */}
