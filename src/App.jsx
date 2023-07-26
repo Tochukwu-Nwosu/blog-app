@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className={ darkMode ? `dark bg-slate-900` : undefined }>
+      <div className={ darkMode ? `dark bg-slate-950` : undefined }>
         <NavBar darkMode={darkMode} setdarkMode={setdarkMode} />
         <main className="max-w-[1024px] px-4 py-8 mx-auto">
           <Routes>
