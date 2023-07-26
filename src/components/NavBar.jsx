@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { navLinks } from '../../data/constants'
 
+// eslint-disable-next-line react/prop-types
 const NavBar = ({ darkMode, setdarkMode }) => {
   const [ menu, setMenu ] = useState(false)  
     
