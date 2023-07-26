@@ -4,12 +4,15 @@ import Blogs from "./components/Blogs"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useState } from "react"
 
 const App = () => {
+  const [ darkMode, setdarkMode ] = useState(false)
+
   return (
     <Router>
-      <div>
-        <NavBar />
+      <div className={ darkMode ? `dark` : undefined }>
+        <NavBar darkMode={darkMode} setdarkMode={setdarkMode} />
         <main className="max-w-[1024px] px-4 py-8 mx-auto">
           <Routes>
             <Route index element={<Home />} />
