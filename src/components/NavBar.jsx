@@ -8,26 +8,26 @@ const NavBar = ({ darkMode, setdarkMode }) => {
   const [ menu, setMenu ] = useState(false)  
     
   return (
-    <nav className="max-w-[1024px] px-4 mx-auto border-b-2">
+    <nav className="max-w-[1024px] px-4 mx-auto border-b-2 dark:bg-slate-900">
       <div className="w-full flex justify-between">
         <h1 className="text-2xl text-blue-600 py-4 font-semibold">Tk Blog</h1>
         <div className="flex items-center">
-            <ul className="hidden sm:flex items-center text-gray-600"> 
+            <ul className="hidden sm:flex items-center text-gray-600 dark:text-gray-200"> 
                 { navLinks.map(
-                    link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400">{link.value}</NavLink>
+                    link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400 dark:hover:text-gray-400">{link.value}</NavLink>
                 ) }
             </ul>
             {/* work on the functionality of the light & darkmode buttons */}
             { !darkMode ? (
-                    <MdOutlineDarkMode 
+                    <MdDarkMode 
                         size={25} 
                         className='mx-2 cursor-pointer' 
                         onClick={() => setdarkMode(true)} 
                     />
                 ) : (
-                    <MdDarkMode 
+                    <MdOutlineDarkMode 
                         size={25} 
-                        className='mx-2 cursor-pointer' 
+                        className='mx-2 cursor-pointer text-gray-200' 
                         onClick={() => setdarkMode(false)} 
                     />
                 ) 
