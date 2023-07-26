@@ -8,13 +8,13 @@ const NavBar = ({ darkMode, setdarkMode }) => {
   const [ menu, setMenu ] = useState(false)  
     
   return (
-    <nav className="max-w-[1024px] px-4 mx-auto border-b-2 dark:bg-slate-900">
+    <nav className="max-w-[1024px] px-4 mx-auto border-b-2">
       <div className="w-full flex justify-between">
         <h1 className="text-2xl text-blue-600 py-4 font-semibold">Tk Blog</h1>
         <div className="flex items-center">
-            <ul className="hidden sm:flex items-center text-gray-600 dark:text-gray-200"> 
+            <ul className="hidden sm:flex items-center text-gray-600 dark:text-gray-400"> 
                 { navLinks.map(
-                    link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400 dark:hover:text-gray-400">{link.value}</NavLink>
+                    link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400 dark:hover:text-gray-200">{link.value}</NavLink>
                 ) }
             </ul>
             {/* work on the functionality of the light & darkmode buttons */}
@@ -27,14 +27,14 @@ const NavBar = ({ darkMode, setdarkMode }) => {
                 ) : (
                     <MdOutlineDarkMode 
                         size={25} 
-                        className='mx-2 cursor-pointer text-gray-200' 
+                        className='mx-2 cursor-pointer text-gray-400' 
                         onClick={() => setdarkMode(false)} 
                     />
                 ) 
             }
             <AiOutlineMenu 
                 size={25} 
-                className='sm:hidden mx-2 cursor-pointer dark:text-gray-200' 
+                className='sm:hidden mx-2 cursor-pointer dark:text-gray-400' 
                 onClick={() => setMenu(true)} 
             />
         </div>
@@ -43,12 +43,12 @@ const NavBar = ({ darkMode, setdarkMode }) => {
             <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center bg-white/50 backdrop-blur-md z-10 dark:bg-slate-900/90'>
                 <ul className='flex flex-col justify-center items-center'> 
                     { navLinks.map(
-                        link => <NavLink key={link.value} to={link.to} className="p-2 text-lg text-gray-800 font-semibold hover:text-gray-500 hover:scale-110 ease-in-out duration-100 dark:text-gray-200 dark:hover:text-gray-400" onClick={() => setMenu(false)}>{link.value}</NavLink>
+                        link => <NavLink key={link.value} to={link.to} className="p-2 text-lg text-gray-800 font-semibold hover:text-gray-500 hover:scale-110 ease-in-out duration-100 dark:text-gray-400 dark:hover:text-gray-200" onClick={() => setMenu(false)}>{link.value}</NavLink>
                     ) }
                 </ul>
                 <AiOutlineClose 
                     size={25} 
-                    className='absolute top-4 right-4 cursor-pointer dark:text-gray-200'
+                    className='absolute top-4 right-4 cursor-pointer dark:text-gray-400'
                     onClick={() => setMenu(false)}
                 />
             </div>

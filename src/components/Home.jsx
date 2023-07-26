@@ -14,7 +14,7 @@ const Home = () => {
           <NavLink key={id} to={`/blogs/${id}`}>
             <div className="my-6 px-4 2xl:px-5 py-2 2xl:py-3 shadow-sm rounded-md hover:shadow-md ease-in-out duration-100" >
                 <h2 className="text-lg sm:text-xl 2xl:text-2xl py-1 font-semibold text-blue-600">{title}</h2>
-                <p className="2xl:text-lg py-1 text-gray-600 italic">Written by {author.name}</p>
+                <p className="2xl:text-lg py-1 text-gray-600 italic dark:text-gray-400">Written by {author.name}</p>
             </div>
           </NavLink>
         ))
