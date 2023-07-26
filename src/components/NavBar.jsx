@@ -34,21 +34,21 @@ const NavBar = ({ darkMode, setdarkMode }) => {
             }
             <AiOutlineMenu 
                 size={25} 
-                className='sm:hidden mx-2 cursor-pointer' 
+                className='sm:hidden mx-2 cursor-pointer dark:text-gray-200' 
                 onClick={() => setMenu(true)} 
             />
         </div>
         {/* mobile menu */}
         { menu && (
-            <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center bg-white/50 backdrop-blur-md z-10'>
-                <ul className='flex flex-col justify-center items-center text-gray-600'> 
+            <div className='sm:hidden absolute top-0 left-0 w-full h-screen flex justify-center items-center bg-white/50 backdrop-blur-md z-10 dark:bg-slate-900/90'>
+                <ul className='flex flex-col justify-center items-center'> 
                     { navLinks.map(
-                        link => <NavLink key={link.value} to={link.to} className="p-2 text-lg text-gray-800 font-semibold hover:text-gray-500 hover:scale-110 ease-in-out duration-100" onClick={() => setMenu(false)}>{link.value}</NavLink>
+                        link => <NavLink key={link.value} to={link.to} className="p-2 text-lg text-gray-800 font-semibold hover:text-gray-500 hover:scale-110 ease-in-out duration-100 dark:text-gray-200 dark:hover:text-gray-400" onClick={() => setMenu(false)}>{link.value}</NavLink>
                     ) }
                 </ul>
                 <AiOutlineClose 
                     size={25} 
-                    className='absolute top-4 right-4 cursor-pointer'
+                    className='absolute top-4 right-4 cursor-pointer dark:text-gray-200'
                     onClick={() => setMenu(false)}
                 />
             </div>
