@@ -18,7 +18,7 @@ const NavBar = ({ darkMode, setdarkMode }) => {
                     link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400 dark:hover:text-gray-200">{link.value}</NavLink>
                 ) }
             </ul>
-            {/* work on the functionality of the light & darkmode buttons */}
+            {/* change light & darkmode buttons */}
             { !darkMode ? (
                     <MdDarkMode 
                         size={25} 

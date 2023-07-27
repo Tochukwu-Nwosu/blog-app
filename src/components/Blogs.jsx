@@ -16,8 +16,8 @@ const Blogs = () => {
 
     return (
         <article className="sm:my-6 px-2 sm:px-4 2xl:px-5 py-2 2xl:py-3">
-            { loading && <div className="py-2 xl:py-3">Loading...</div> }
-            { error && <div className="py-2 xl:py-3">{error}</div> }
+            { loading && <div className="py-2 xl:py-3 dark:text-gray-400">Loading...</div> }
+            { error && <div className="py-2 xl:py-3 dark:text-gray-400">{error}</div> }
             { blog && (
                 <>
                     <h1 className="text-3xl sm:text-4xl 2xl:text-5xl my-4 font-semibold text-blue-600">{title}</h1>

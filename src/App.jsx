@@ -1,10 +1,12 @@
 import NotFound from "./components/NotFound"
+import Footer from "./components/Footer"
 import NewBlog from "./components/NewBlog"
 import Blogs from "./components/Blogs"
 import Home from "./components/Home"
 import NavBar from "./components/NavBar"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
+
 
 const App = () => {
   const [ darkMode, setdarkMode ] = useState(false)
@@ -21,7 +23,7 @@ const App = () => {
             <Route path='*' element={<NotFound />} />
           </Routes>
         </main>
-        {/* footer */}
+        <Footer />
       </div>
     </Router>
   )

@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div className="sm:my-6">
       <h1 className="text-3xl sm:text-4xl 2xl:text-5xl my-2 font-semibold text-blue-600">My Blogs</h1>
-      { loading && <div className="py-2 xl:py-3">Loading...</div> }
-      { error && <div className="py-2 xl:py-3">{error}</div> }
+      { loading && <div className="py-2 xl:py-3 dark:text-gray-400">Loading...</div> }
+      { error && <div className="py-2 xl:py-3 dark:text-gray-400">{error}</div> }
       { blogs && (
         blogs.map(({ id, title, author }) => (
           <NavLink key={id} to={`/blogs/${id}`}>
