@@ -9,7 +9,7 @@ const NavBar = ({ darkMode, setdarkMode }) => {
   const [ menu, setMenu ] = useState(false)  
     
   return (
-    <nav className="max-w-[1024px] px-4 mx-auto border-b-2">
+    <nav className="max-w-[1024px] px-4 mx-auto border-b-2 dark:border-gray-800">
       <div className="w-full flex justify-between">
         <h1 className="text-2xl text-blue-600 py-4 font-semibold">Tk Blog</h1>
         <div className="flex items-center">
