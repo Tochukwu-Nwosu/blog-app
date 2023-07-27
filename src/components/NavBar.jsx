@@ -1,4 +1,4 @@
-import { MdOutlineDarkMode, MdDarkMode } from 'react-icons/md'
+import { BsSun, BsMoonFill } from 'react-icons/bs'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
@@ -18,16 +18,15 @@ const NavBar = ({ darkMode, setdarkMode }) => {
                     link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400 dark:hover:text-gray-200">{link.value}</NavLink>
                 ) }
             </ul>
-            {/* change light & darkmode buttons */}
             { !darkMode ? (
-                    <MdDarkMode 
-                        size={25} 
+                    <BsMoonFill 
+                        size={18} 
                         className='mx-2 cursor-pointer' 
                         onClick={() => setdarkMode(true)} 
                     />
                 ) : (
-                    <MdOutlineDarkMode 
-                        size={25} 
+                    <BsSun
+                        size={18} 
                         className='mx-2 cursor-pointer text-gray-400' 
                         onClick={() => setdarkMode(false)} 
                     />
