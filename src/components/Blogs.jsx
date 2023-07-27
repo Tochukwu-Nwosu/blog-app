@@ -23,11 +23,11 @@ const Blogs = () => {
                     <h1 className="text-3xl sm:text-4xl 2xl:text-5xl my-4 font-semibold text-blue-600">{title}</h1>
                     <div className="w-full sm:mt-6 flex items-center gap-1 sm:gap-2">
                         <img src={author.imgSrc} alt="author's image" className="w-[50px] h-[50px] object-cover rounded-full scale-75 sm:scale-100" />
-                        <p className="text-gray-600 italic text-xs sm:text-base">Written by {author.name} {date}</p>
+                        <p className="text-gray-600 italic text-xs sm:text-base dark:text-gray-400">Written by {author.name} {date}</p>
                     </div>
                     <div className="w-full my-3 sm:my-6">
                         <img src={image} alt="image" className="w-full h-[400px] object-cover mb-6 sm:mb-8" />
-                        <p>{body}</p>
+                        <p className="dark:text-gray-50">{body}</p>
                     </div>
                     { param.id === '1' || param.id === '2' ? (
                         <button className="mt-4 px-3 py-2 bg-blue-600 text-gray-100 font-semibold rounded-md opacity-50 cursor-not-allowed">Delete</button>
