@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { navLinks } from '../../data/constants'
 
 // eslint-disable-next-line react/prop-types
-const NavBar = ({ darkMode, setdarkMode }) => {
+const NavBar = ({ theme, toggleTheme }) => {
   const [ menu, setMenu ] = useState(false)  
     
   return (
@@ -18,17 +18,17 @@ const NavBar = ({ darkMode, setdarkMode }) => {
                     link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400 dark:hover:text-gray-200">{link.value}</NavLink>
                 ) }
             </ul>
-            { !darkMode ? (
+            { theme === 'light' ? (
                     <BsMoonFill 
                         size={18} 
                         className='mx-2 cursor-pointer' 
-                        onClick={() => setdarkMode(true)} 
+                        onClick={() => toggleTheme()} 
                     />
                 ) : (
                     <BsSun
                         size={18} 
                         className='mx-2 cursor-pointer text-gray-400' 
-                        onClick={() => setdarkMode(false)} 
+                        onClick={() =>  toggleTheme()} 
                     />
                 ) 
             }
