@@ -24,12 +24,10 @@ const useTheme = () => {
       useEffect(() => {
         // This function applies dark or light mode to the document based on the theme value
         const reverseTheme = theme === 'light' ? 'dark' : 'light'
-        const root = window.document.documentElement
+        const root = window.document.documentElement   // html document
         root.classList.remove(reverseTheme)
         root.classList.add(theme)
       }, [theme])
-    
-
       
   return [ theme, toggleTheme ]
 }

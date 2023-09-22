@@ -9,9 +9,7 @@ import useTheme from "./components/useTheme"
 
 
 const App = () => {
-  
   const [ theme, toggleTheme ] = useTheme()
-  console.log(theme)
 
   return (
     <Router>
@@ -32,4 +30,3 @@ const App = () => {
 }
 
 export default App
-{/* <div className={ `w-full min-h-screen relative ${ theme === 'dark' ? ` dark bg-slate-950` : ` bg-white` }` }> */}
