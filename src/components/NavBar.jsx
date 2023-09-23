@@ -3,10 +3,12 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { navLinks } from '../../data/constants'
+import useTheme from './useTheme'
 
 // eslint-disable-next-line react/prop-types
-const NavBar = ({ theme, toggleTheme }) => {
+const NavBar = () => {
   const [ menu, setMenu ] = useState(false)  
+  const [ theme, toggleTheme ] = useTheme()
     
   return (
     <nav className="max-w-[1024px] px-4 mx-auto border-b-2 dark:border-gray-800">
