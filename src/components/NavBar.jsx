@@ -8,13 +8,8 @@ import useTheme from './useTheme'
 // eslint-disable-next-line react/prop-types
 const NavBar = () => {
   const [ menu, setMenu ] = useState(false)  
-<<<<<<< HEAD
-  const [ darkMode, setdarkMode ] = useState(false)
-   
-=======
   const [ theme, toggleTheme ] = useTheme()
     
->>>>>>> 783d5cd706b03782d6e2c8c2a764a7fb602c8d43
   return (
     <nav className="max-w-[1024px] px-4 mx-auto border-b-2 dark:border-gray-800">
       <div className="w-full flex justify-between">
@@ -25,16 +20,9 @@ const NavBar = () => {
                     link => <NavLink key={link.value} to={link.to} className="navlink">{link.value}</NavLink>
                 ) }
             </ul>
-<<<<<<< HEAD
-            
-            { !darkMode ? (
-                    <MdOutlineDarkMode 
-                        size={25} 
-=======
             { theme === 'light' ? (
                     <BsMoonFill 
                         size={18} 
->>>>>>> 783d5cd706b03782d6e2c8c2a764a7fb602c8d43
                         className='mx-2 cursor-pointer' 
                         onClick={() => toggleTheme()} 
                     />
