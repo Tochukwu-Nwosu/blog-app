@@ -7,8 +7,7 @@ import { navLinks } from '../../data/constants'
 const NavBar = () => {
   const [ menu, setMenu ] = useState(false)  
   const [ darkMode, setdarkMode ] = useState(false)
-    
-  // modify font, style and color   
+   
   return (
     <nav className="max-w-[1024px] px-4 mx-auto border-b-2">
       <div className="w-full flex justify-between">
@@ -19,7 +18,7 @@ const NavBar = () => {
                     link => <NavLink key={link.value} to={link.to} className="mx-2 p-2 hover:text-gray-400">{link.value}</NavLink>
                 ) }
             </ul>
-            {/* work on the functionality of the light & darkmode buttons */}
+            
             { !darkMode ? (
                     <MdOutlineDarkMode 
                         size={25} 
