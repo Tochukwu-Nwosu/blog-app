@@ -32,7 +32,7 @@ npm install -g json-server
 ## Run App
 Start json-server
 ``` javascript
-json-server --watch --port 4000 ./data/db.json
+json-server --watch --port 8000 ./data/db.json
 ```
 Run your build
 ``` javascript
